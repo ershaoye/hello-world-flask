@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: hello-world-flask
   name: hello-world-flask
@@ -10,14 +9,11 @@ spec:
   selector:
     matchLabels:
       app: hello-world-flask
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: hello-world-flask
     spec:
       containers:
-      - image: daveismew/hello-world-flask:latest
-        name: hello-world-flask
-        resources: {}
+        - image: daveismew/hello-world-flask:latest
+          name: hello-world-flask
